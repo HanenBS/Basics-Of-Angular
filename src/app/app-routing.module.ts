@@ -8,6 +8,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormComponent } from './components/form/form.component';
 import { CsvComponent } from './components/csv/csv.component';
+import { SendComponent } from './components/behavior/send/send.component';
+import { ReceiveComponent } from './components/behavior/receive/receive.component';
 
 const routes: Routes = [
   {path : "user", component:UserComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path : "pipe", component:PipeComponent},
   {path : "form", component:FormComponent},
   {path : "csv", component:CsvComponent},
+  {path : "send", component:SendComponent},
+  {path : "receive", component:ReceiveComponent},
 
   {path : "**", component:UserComponent}
 

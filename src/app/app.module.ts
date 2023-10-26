@@ -15,6 +15,8 @@ import { PipeComponent } from './pipe/pipe.component';
 import { FormComponent } from './components/form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CsvComponent } from './components/csv/csv.component';
+import { SendComponent } from './components/behavior/send/send.component';
+import { ReceiveComponent } from './components/behavior/receive/receive.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { CsvComponent } from './components/csv/csv.component';
     PipeComponent,
     FormComponent,
     CsvComponent,
+    SendComponent,
+    ReceiveComponent,
     
   ],
   imports: [
