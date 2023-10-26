@@ -1,0 +1,37 @@
+<div class="container-fluid">
+<p>test works!</p>
+
+<div class="row">
+    <button type="button" class="btn btn-link"(click)="back()">Back</button>
+</div>
+<div class="row" *ngIf="active">
+    <h3>Welcome {{FirstName}}</h3>
+</div>
+
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th><i class="fa fa-user" aria-hidden="true"></i>Name</th>
+            <th>Code</th>
+            <th>Country</th>
+        </tr>
+
+        <tr *ngFor="let item of dataList">
+            <td>{{item.name}}</td>
+            <td>{{item.code}}</td>
+            <td>{{item.country}}</td>
+        </tr>
+
+    </table>
+</div>
+
+<div class="row">
+    <div [ngSwitch] ="name">
+        <div *ngSwitchCase="'Khalil'">Welcome Khalil</div>
+        <div *ngSwitchCase="'Mousa'">Welcome Moussa</div>
+        <div *ngSwitchCase="'wassim'">Welcome Wassim</div>
+    </div>
+</div>
+
+</div>

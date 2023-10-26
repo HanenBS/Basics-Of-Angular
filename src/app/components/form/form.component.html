@@ -1,0 +1,50 @@
+<p>form works!</p>
+<div class="container">
+<h2><u>Contact</u></h2>
+
+<form autocomplete="off" #form="ngForm"(submit)="onSubmit(form)">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email"
+      ngModel name="email"
+      [(ngModel)]="login.email"
+      #email="ngModel"
+      required
+      minlength="5">
+      <!--- pattern="gmail" -->
+
+      <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+        <div *ngIf="email.errors?.['required']">required</div>
+        <div *ngIf="email.errors?.['minlength']">minimum 9 characters</div>
+       <!--- <div *ngIf="email.errors?.['pattern']">pattern</div> -->
+</div>
+     
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password"
+      ngModel name="password"
+      [(ngModel)]="login.password"
+      #password="ngModel"
+      required
+      minlength="5">
+      <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+        <div *ngIf="password.errors?.['required']">Password required</div>
+        <div *ngIf="password.errors?.['minlength']">minimum 9 characters</div>
+      </div>
+    </div>
+   
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Password"
+      #confirmPassword="ngModel" [(ngModel)]="confirmPass" pattern="{{login.password}}" required>
+      <div class="alert alert-danger" *ngIf="confirmPassword.touched && !confirmPassword.valid">
+        <div *ngIf="confirmPassword.errors?.['required']">Confirm Password required</div>
+
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

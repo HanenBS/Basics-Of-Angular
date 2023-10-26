@@ -1,0 +1,43 @@
+<h1> USER </h1>
+
+<p>{{name}}</p>
+<p> <b> Status:  </b>{{getStatus()}}</p>
+
+<button type="button" class="btn btn-danger" (click)="getMessage()">Save</button>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="text-center"> 2 way binding</h4>
+        </div>
+
+        <div class="card-body">
+            <input type="text" class="form-control" [(ngModel)]="msg"> 
+            {{msg}}
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+    <button type="button" class="btn btn-link"(click)="goToRegisterTest()"> Go To Register Test</button>
+</div>
+
+
+<h3>JSON PLACEHOLDER</h3>
+<table class="table table-striped table-hover table-sm">
+    <thead class="thead-dark">
+        <th></th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Address</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address.street}}</td>
+        </tr>
+    </tbody>
+</table>
