@@ -22,21 +22,13 @@ This repository contains a basic Angular project that demonstrates the fundament
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository: git clone https://github.com/your-username/my-first-project.git
 
-git clone https://github.com/your-username/my-first-project.git
-2. Navigate to the project directory:
+2. Navigate to the project directory: cd my-first-project
 
-cd my-first-project
-3. Install the dependencies:
+3. Install the dependencies: npm install
 
-npm install
-4. Run the application:
-
-ng serve
+4. Run the application: ng serve
 
 ### Running the Tests
-
-1. Run the tests:
-
-ng test
+Run the tests: ng test
